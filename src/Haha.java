@@ -12,11 +12,12 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
+import java.awt.Toolkit;
 
 
 public class Haha {
 
-   private JFrame frame;
+   private JFrame frmVendingMachine;
    private JTextField bugger_textField;
    private JTextField potato_textField;
    private JTextField coke_textField;
@@ -29,7 +30,7 @@ public class Haha {
          public void run() {
             try {
                Haha window = new Haha();
-               window.frame.setVisible(true);
+               window.frmVendingMachine.setVisible(true);
             } catch (Exception e) {
                e.printStackTrace();
             }
@@ -50,17 +51,19 @@ public class Haha {
    private void initialize() {
 
       
-      frame = new JFrame();
-      frame.setBackground(Color.WHITE);
-      frame.getContentPane().setForeground(Color.WHITE);
-      frame.setBounds(100, 100, 600, 500);
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.getContentPane().setLayout(null);
+      frmVendingMachine = new JFrame();
+      frmVendingMachine.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\ehxhf\\eclipse-workspace\\VDing\\src\\image\\icon .png"));
+      frmVendingMachine.setTitle("Vending Machine");
+      frmVendingMachine.setBackground(Color.WHITE);
+      frmVendingMachine.getContentPane().setForeground(Color.WHITE);
+      frmVendingMachine.setBounds(100, 100, 600, 500);
+      frmVendingMachine.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frmVendingMachine.getContentPane().setLayout(null);
       
       JPanel panel = new JPanel();
       panel.setBackground(Color.ORANGE);
       panel.setBounds(0, 0, 180, 300);
-      frame.getContentPane().add(panel);
+      frmVendingMachine.getContentPane().add(panel);
       panel.setLayout(null);
       
       JLayeredPane layeredPane_1 = new JLayeredPane();
@@ -112,7 +115,7 @@ public class Haha {
       panel_1.setBackground(Color.ORANGE);
       panel_1.setBounds(200, 0, 180, 300);
       
-      frame.getContentPane().add(panel_1);
+      frmVendingMachine.getContentPane().add(panel_1);
       panel_1.setLayout(null);
       
       JLayeredPane layeredPane = new JLayeredPane();
@@ -148,7 +151,7 @@ public class Haha {
       JPanel panel_2 = new JPanel();
       panel_2.setBackground(Color.ORANGE);
       panel_2.setBounds(400, 0, 180, 300);
-      frame.getContentPane().add(panel_2);
+      frmVendingMachine.getContentPane().add(panel_2);
       panel_2.setLayout(null);
       
       JLayeredPane layeredPane_2 = new JLayeredPane();
@@ -188,7 +191,7 @@ public class Haha {
       JPanel panel_3 = new JPanel();
       panel_3.setBackground(Color.ORANGE);
       panel_3.setBounds(0, 310, 580, 150);
-      frame.getContentPane().add(panel_3);
+      frmVendingMachine.getContentPane().add(panel_3);
       panel_3.setLayout(null);
       
       JLayeredPane layeredPane_3 = new JLayeredPane();
